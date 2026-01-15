@@ -3723,6 +3723,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "connector-ftp"
+version = "1.11.0-unstable"
+dependencies = [
+ "linkme",
+ "paste",
+ "runtime",
+ "snafu",
+ "tokio",
+ "url",
+]
+
+[[package]]
 name = "connector-mongodb"
 version = "1.11.0-unstable"
 dependencies = [
@@ -3817,6 +3829,22 @@ dependencies = [
  "scylla",
  "snafu",
  "tracing",
+]
+
+[[package]]
+name = "connector-sharepoint"
+version = "1.11.0-unstable"
+dependencies = [
+ "async-trait",
+ "data_components",
+ "datafusion",
+ "document_parse",
+ "graph-rs-sdk",
+ "linkme",
+ "paste",
+ "runtime",
+ "snafu",
+ "url",
 ]
 
 [[package]]
@@ -16313,12 +16341,14 @@ dependencies = [
  "connector-dremio",
  "connector-duckdb",
  "connector-flightsql",
+ "connector-ftp",
  "connector-mongodb",
  "connector-mssql",
  "connector-mysql",
  "connector-oracle",
  "connector-postgres",
  "connector-scylladb",
+ "connector-sharepoint",
  "connector-snowflake",
  "connector-spark",
  "event_stream",
@@ -16393,12 +16423,14 @@ dependencies = [
  "connector-dremio",
  "connector-duckdb",
  "connector-flightsql",
+ "connector-ftp",
  "connector-mongodb",
  "connector-mssql",
  "connector-mysql",
  "connector-oracle",
  "connector-postgres",
  "connector-scylladb",
+ "connector-sharepoint",
  "connector-snowflake",
  "connector-spark",
  "regex",
