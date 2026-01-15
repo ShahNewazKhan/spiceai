@@ -3769,6 +3769,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "connector-spark"
+version = "1.11.0-unstable"
+dependencies = [
+ "async-trait",
+ "data_components",
+ "datafusion",
+ "linkme",
+ "paste",
+ "runtime",
+ "runtime-parameters",
+ "snafu",
+]
+
+[[package]]
 name = "console"
 version = "0.15.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -16234,6 +16248,7 @@ dependencies = [
  "connector-oracle",
  "connector-postgres",
  "connector-snowflake",
+ "connector-spark",
  "event_stream",
  "flightrepl",
  "futures",
@@ -16309,6 +16324,7 @@ dependencies = [
  "connector-oracle",
  "connector-postgres",
  "connector-snowflake",
+ "connector-spark",
  "regex",
  "runtime",
  "runtime-parameters",
