@@ -3658,6 +3658,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "connector-delta-lake"
+version = "1.11.0-unstable"
+dependencies = [
+ "async-trait",
+ "aws-sdk-credential-bridge",
+ "data_components",
+ "datafusion",
+ "linkme",
+ "paste",
+ "runtime",
+ "snafu",
+ "tokio",
+ "tracing",
+]
+
+[[package]]
 name = "connector-dremio"
 version = "1.11.0-unstable"
 dependencies = [
@@ -16293,6 +16309,7 @@ dependencies = [
  "app",
  "clap 4.5.54",
  "connector-clickhouse",
+ "connector-delta-lake",
  "connector-dremio",
  "connector-duckdb",
  "connector-flightsql",
@@ -16372,6 +16389,7 @@ name = "spicepodschema"
 version = "1.11.0-unstable"
 dependencies = [
  "connector-clickhouse",
+ "connector-delta-lake",
  "connector-dremio",
  "connector-duckdb",
  "connector-flightsql",
