@@ -3658,6 +3658,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "connector-dremio"
+version = "1.11.0-unstable"
+dependencies = [
+ "arrow",
+ "async-trait",
+ "data_components",
+ "datafusion",
+ "datafusion-federation",
+ "flight_client",
+ "linkme",
+ "ns_lookup",
+ "paste",
+ "runtime",
+ "snafu",
+ "tracing",
+]
+
+[[package]]
 name = "connector-duckdb"
 version = "1.11.0-unstable"
 dependencies = [
@@ -16275,6 +16293,7 @@ dependencies = [
  "app",
  "clap 4.5.54",
  "connector-clickhouse",
+ "connector-dremio",
  "connector-duckdb",
  "connector-flightsql",
  "connector-mongodb",
@@ -16353,6 +16372,7 @@ name = "spicepodschema"
 version = "1.11.0-unstable"
 dependencies = [
  "connector-clickhouse",
+ "connector-dremio",
  "connector-duckdb",
  "connector-flightsql",
  "connector-mongodb",
