@@ -3678,6 +3678,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "connector-databricks"
+version = "1.11.0-unstable"
+dependencies = [
+ "async-trait",
+ "aws-sdk-credential-bridge",
+ "data_components",
+ "datafusion",
+ "futures",
+ "linkme",
+ "paste",
+ "runtime",
+ "runtime-secrets",
+ "secrecy",
+ "snafu",
+ "token_provider",
+ "tokio",
+ "tracing",
+]
+
+[[package]]
 name = "connector-delta-lake"
 version = "1.11.0-unstable"
 dependencies = [
@@ -14532,6 +14552,8 @@ dependencies = [
  "mediatype",
  "model_components",
  "moka",
+ "mongodb",
+ "mysql_async",
  "notify",
  "ns_lookup",
  "object_store",
@@ -14594,6 +14616,7 @@ dependencies = [
  "tempfile",
  "tera",
  "test-framework",
+ "tiberius",
  "token_provider",
  "tokio",
  "tokio-rusqlite",
@@ -16493,6 +16516,7 @@ dependencies = [
  "app",
  "clap 4.5.54",
  "connector-clickhouse",
+ "connector-databricks",
  "connector-delta-lake",
  "connector-dremio",
  "connector-duckdb",
