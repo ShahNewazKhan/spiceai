@@ -66,7 +66,10 @@ use crate::{
         s3_vectors::prepare_for_aws_tests,
         tables::{SearchTable, enrich_table},
     },
-    utils::{init_tracing_with_task_history, runtime_ready_check, test_request_context},
+    utils::{
+        init_tracing_with_task_history, register_test_connectors, runtime_ready_check,
+        test_request_context,
+    },
 };
 
 pub mod megascience;
@@ -511,6 +514,7 @@ fn normalize_search_response(mut json: Value) -> String {
 }
 
 pub async fn start_app(app: App) -> Result<Config, anyhow::Error> {
+    register_test_connectors().await;
     configure_test_datafusion();
     let api_config = create_api_bindings_config();
     let rt = Arc::new(Runtime::builder().with_app(app).build().await);
