@@ -234,36 +234,31 @@ mod tests {
     #[test]
     fn test_error_invalid_direction() {
         let schema = test_schema();
-        let result = parse_sort_columns("id INVALID", &schema);
-        assert!(result.is_err());
+        parse_sort_columns("id INVALID", &schema).unwrap_err();
     }
 
     #[test]
     fn test_error_column_not_found() {
         let schema = test_schema();
-        let result = parse_sort_columns("nonexistent DESC", &schema);
-        assert!(result.is_err());
+        parse_sort_columns("nonexistent DESC", &schema).unwrap_err();
     }
 
     #[test]
     fn test_error_empty_input() {
         let schema = test_schema();
-        let result = parse_sort_columns("", &schema);
-        assert!(result.is_err());
+        parse_sort_columns("", &schema).unwrap_err();
     }
 
     #[test]
     fn test_error_only_whitespace() {
         let schema = test_schema();
-        let result = parse_sort_columns("   ,   ", &schema);
-        assert!(result.is_err());
+        parse_sort_columns("   ,   ", &schema).unwrap_err();
     }
 
     #[test]
     fn test_error_too_many_parts() {
         let schema = test_schema();
-        let result = parse_sort_columns("id ASC extra", &schema);
-        assert!(result.is_err());
+        parse_sort_columns("id ASC extra", &schema).unwrap_err();
     }
 
     #[test]
